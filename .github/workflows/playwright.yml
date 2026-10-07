@@ -33,4 +33,4 @@ jobs:
             echo "Database not ready yet, retrying in 5s..."
             sleep 5
           done
-          docker compose -f docker-compose.prod.yml exec -T -u root laravel-api chown -R www-data:www-data
+          docker compose -f docker-compose.prod.yml exec -T --user root laravel-api sh -c
