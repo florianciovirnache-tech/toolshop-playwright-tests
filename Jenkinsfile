@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    // NEW: verifică GitHub la fiecare 5 minute; dacă e cod nou, rulează testele
+    // NEW: Check GitHub for new updates every 5 minutes
     triggers {
         pollSCM('H/5 * * * *')
     }
