@@ -94,6 +94,7 @@ On every push and pull request, GitHub Actions:
 4. Waits until the API and UI respond
 5. Runs the Playwright suite on Chromium, Firefox and WebKit
 6. Uploads the HTML report as an artifact, and dumps container diagnostics if anything fails
+7. The same suite also runs in a local Jenkins pipeline (see `Jenkinsfile`), triggered automatically on new commits.
 
 ## Roadmap
 
