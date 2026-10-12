@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    // NEW: verifică GitHub la fiecare 5 minute; dacă e cod nou, rulează testele
+    triggers {
+        pollSCM('H/5 * * * *')
+    }
+
     stages {
         stage('Check Toolshop is running') {
             steps {
